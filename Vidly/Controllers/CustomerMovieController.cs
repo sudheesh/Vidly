@@ -20,14 +20,14 @@ namespace Vidly.Controllers
             
         {
             var customer = new Customer();
-            List<Customer>customers = new List<Customer>()
+            var customers = new List<Customer>()
             {
-                new Customer() {Id=1,Name="jonny Walker" },
-                new Customer() {Id = 2, Name = "David " }
+                new Customer{Name="jonny Walker" },
+                new Customer{Name = "David " }
             };
-            customer.Id = 1;
+            
 
-            return View();
+            return View(customers);
         }
     }
 }

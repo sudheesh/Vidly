@@ -1,4 +1,4 @@
-﻿@model Vidly.Models.Customer
+﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
     ViewBag.Title = "Customer";
@@ -6,13 +6,24 @@
 
 <h1>CUSTOMERS</h1>
 
-<table style="width: 100%"></table>
-<tr>
-    <th>Customer Name</th>
-</tr>
-<tr>
-    <td>
-        @foreach(var item in customers)
+<table style="width: 100%">
+    <tr>
+        <th>Customer Name</th>
+    </tr>
 
-    </td>
-</tr>
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.Name</td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+    
+
