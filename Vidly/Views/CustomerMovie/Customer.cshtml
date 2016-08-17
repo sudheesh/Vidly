@@ -3,23 +3,27 @@
 @{
     ViewBag.Title = "Customer";
 }
+<div class="container">
+    <h1>CUSTOMERS</h1>
 
-<h1>CUSTOMERS</h1>
+    <table class="table-bordered table-hover" style="width: 100%;">
+        <thead>
+            <tr>
+                <th style="padding-left: 2%;font-size: 2em">Customer Name</th>
+            </tr>
+        </thead>
 
-<table style="width: 100%">
-    <tr>
-        <th>Customer Name</th>
-    </tr>
+        @foreach (var customer in Model)
+        {
+            <tbody>
+                <tr>
+                    <td height="50" style="padding-left: 2%;font-size: 1.5em">@customer.Name</td>
+                </tr>
+            </tbody>
+        }
 
-
-    @foreach (var customer in Model)
-    {
-        <tr>
-            <td>@customer.Name</td>
-        </tr>
-    }
-
-</table>
+    </table>
+</div>
 
 
 
